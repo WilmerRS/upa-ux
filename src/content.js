@@ -37,6 +37,7 @@ try {
 
 function r() {
   const doc = window.frames[1].document;
+  // doc.style.display = "none";
   if(!doc) return false;
   const app = doc.createElement("div");
   app.id = "upa-ux-root";
