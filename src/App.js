@@ -4,7 +4,7 @@ import React from "react";
 import "./App.css";
 import { useForm } from "react-hook-form";
 
-const App = ({ docframe, isExt }) => {
+const App = ({ docframe }) => {
   // const doc = window.frames[1].document;
   const parentLoginButton = docframe.querySelector('[name="btnIngresar"]');
   const parentUsernameInput = docframe.querySelector("#usuario")

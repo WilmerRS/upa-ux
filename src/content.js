@@ -18,7 +18,7 @@ const Main = ({docframe}) => {
       >
         <FrameContextConsumer>
           {({document, window}) => {
-            return <App document={document} docframe={docframe} window={window} isExt={true} />;
+            return <App document={document} docframe={docframe} window={window}  />;
           }}
         </FrameContextConsumer>
       </Frame>
