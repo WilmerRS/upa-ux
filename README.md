@@ -14,7 +14,7 @@ Extension for chrome that allows you to log into the main University vortal.
 
 ## 🐠 Adding React app extension to Chrome
 
-In Chrome browser, go to chrome://extensions page and switch on developer mode. This enables the ability to locally install a Chrome extension.
+In Chrome browser, go to `chrome://extensions` page and switch on developer mode. This enables the ability to locally install a Chrome extension.
 
 ## 📷 Screenshots
 
