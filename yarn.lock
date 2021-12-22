@@ -8489,6 +8489,11 @@
   "resolved" "https://registry.npmjs.org/react-frame-component/-/react-frame-component-4.1.2.tgz"
   "version" "4.1.2"
 
+"react-hook-form@^7.22.3":
+  "integrity" "sha512-VhWJ531WbyP25C0O0nNTe6GNHmw/zFrJAXJLGKEeseNHitjcQXZ7OsdHbFSiH2KEYmY9tDFkMz9UzWUHdyFswQ=="
+  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.22.3.tgz"
+  "version" "7.22.3"
+
 "react-is@^16.12.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -8499,7 +8504,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.9.0.tgz"
   "version" "16.9.0"
 
-"react@^16.13.1", "react@>= 16.3":
+"react@^16.13.1", "react@^16.8.0 || ^17", "react@>= 16.3":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"

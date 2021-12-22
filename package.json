@@ -18,6 +18,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-frame-component": "^4.1.2",
+    "react-hook-form": "^7.22.3",
     "resolve": "^1.17.0",
     "whatwg-fetch": "3.2.0"
   },
