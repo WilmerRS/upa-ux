@@ -4,12 +4,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = ({docframe, isExt}) =>  {
+  // const doc = window.frames[1].document;
+  // return (
+    const a = docframe.querySelector('[name="btnIngresar"]')
+    console.log({a});
+    // console.log(window.frames[1].document.querySelector('[name="btnIngresar"]'));
     return (
       <div className="App">
         <header className="App-header">
-          {this.props.isExt ? 
+          {isExt ? 
             <img src={chrome.runtime.getURL("static/media/logo.svg")} className="App-logo" alt="logo" />
           :
             <img src={logo} className="App-logo" alt="logo" />
@@ -22,7 +26,7 @@ class App extends Component {
         </p>
       </div>
     );
-  }
+  
 }
 
 export default App;
