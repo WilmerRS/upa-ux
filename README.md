@@ -23,6 +23,8 @@ In Chrome browser, go to `chrome://extensions` page and switch on developer mode
   <img src="" width="400"/>
 </div>
 
+## Fork
+This project is a fork of this repository: `https://github.com/satendra02/react-chrome-extension`.
 
 ## 🖋️ Authors
 
