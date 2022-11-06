@@ -18,6 +18,14 @@ export default class UnipamplonaVortalLoadListener {
       table.style.display = "none";
     }
 
+    const cssNode = document.createElement("link");
+
+    cssNode.type = "text/css";
+    cssNode.rel = "stylesheet";
+    cssNode.href = `chrome-extension://${chrome.runtime.id}/assets/index.css`;
+
+    documentFrame.head.appendChild(cssNode);
+
     onLoad({
       document,
       documentFrame,
