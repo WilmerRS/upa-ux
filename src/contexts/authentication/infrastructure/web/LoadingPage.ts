@@ -3,8 +3,6 @@ export default class LoadingPage {
     console.log("\n🌀 Loading Start");
     const body = this._createBodyElement();
 
-    // while (document.getElementsByTagName("frameset").length === 0) {}
-
     const frameset: any = document.getElementsByTagName("frameset")[0];
     frameset.style.display = "none";
 
@@ -13,13 +11,19 @@ export default class LoadingPage {
 
   _createBodyElement() {
     const body = document.createElement("body");
+
     body.id = "loading-root";
-    body.innerHTML = "loading";
+    body.innerHTML = "Cargando...";
     body.style.width = "100vw";
     body.style.height = "100vh";
     body.style.overflow = "hidden";
     body.style.display = "grid";
     body.style.placeContent = "center";
+    body.style.color = "rgb(139 92 246 / 1)";
+    body.style.fontWeight = "900";
+    body.style.fontSize = "1.2rem";
+    body.style.lineHeight = "2.1rem";
+
     return body;
   }
 
