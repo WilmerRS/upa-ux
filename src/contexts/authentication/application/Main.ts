@@ -18,7 +18,9 @@ export default class Main {
     const loadingBodyId = `${loadingPageId}-body`;
     const loginPageId = "unipamplona-vortal-login-page";
 
-    const document = this._loadingTargetCreator.create({appId: loadingBodyId});
+    const document = this._loadingTargetCreator.create({
+      appId: loadingBodyId,
+    });
 
     this._createReactApp.render({
       targetDocument: document,
@@ -37,6 +39,6 @@ export default class Main {
       appId: loginPageId,
     });
 
-    this._loadingTargetCreator.remove({appId: loadingBodyId});
+    this._loadingTargetCreator.remove({ appId: loadingBodyId });
   }
 }
