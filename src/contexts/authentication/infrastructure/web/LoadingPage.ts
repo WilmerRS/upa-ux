@@ -19,7 +19,7 @@ export default class LoadingPage {
     body.style.overflow = "hidden";
     body.style.display = "grid";
     body.style.placeContent = "center";
-    body.style.color = "rgb(139 92 246 / 1)";
+    body.style.color = "rgb(17 24 39 / 1)";
     body.style.fontWeight = "900";
     body.style.fontSize = "1.2rem";
     body.style.lineHeight = "2.1rem";

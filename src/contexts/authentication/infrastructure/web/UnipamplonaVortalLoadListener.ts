@@ -22,7 +22,7 @@ export default class UnipamplonaVortalLoadListener {
 
     cssNode.type = "text/css";
     cssNode.rel = "stylesheet";
-    cssNode.href = `chrome-extension://${chrome.runtime.id}/assets/index.css`;
+    cssNode.href = `chrome-extension://${chrome.runtime.id}/assets/authentication.css`;
 
     documentFrame.head.appendChild(cssNode);
 
