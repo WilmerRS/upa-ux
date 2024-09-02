@@ -21,4 +21,4 @@ Home page wrapper of the University of Pamplona in order to improve the user exp
 
 The developers have contributed to this project:
 
-* Wilmer Rodríguez Sánchez - <a href="https://github.com/WilmerRS"> WilmerRS </a>
+* Wilmer Rodríguez Sánchez - [WilmerRS](https://github.com/WilmerRS)
