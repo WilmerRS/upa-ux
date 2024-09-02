@@ -1,26 +1,29 @@
 import ReactDOM from "react-dom/client";
 
-import App from "./App.js";
+import App, { AppPages } from "./App";
 
 export default class CreateReactApp {
-  render({
-    documentFrame,
-  }: {
-    documentFrame: Document;
-  }) {
-    console.log("\n🚀 Create React App started!\n");
+  render({ targetDocument, page, appId }: { targetDocument: Document; page: AppPages, appId: string }) {
+    console.log(`🚀 [CreateReactApp][${appId}] Create React App started!`);
 
-    const app = documentFrame.createElement("div");
-    app.id = "upa-ux-root";
-    documentFrame.body.appendChild(app);
+    const app = targetDocument.createElement("div");
+    app.id = appId;
+    targetDocument.body.appendChild(app);
 
     const root = ReactDOM.createRoot(app);
 
-    const Main = ({ documentFrame }: { documentFrame: Document }) => {
-      return <App documentFrame={documentFrame} />;
+    const Main = ({
+      documentFrame,
+      page,
+    }: {
+      documentFrame: Document;
+      page: AppPages;
+    }) => {
+      return <App documentFrame={documentFrame} page={page} />;
     };
-    root.render(<Main documentFrame={documentFrame} />);
 
-    console.log("\n✅ Create React App render!\n");
+    root.render(<Main documentFrame={targetDocument} page={page} />);
+
+    console.log(`✅ [CreateReactApp][${appId}] Create React App render!`);
   }
 }

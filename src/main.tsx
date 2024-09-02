@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App documentFrame={document} />;
+    <App documentFrame={document} page="login" />;
   </React.StrictMode>
 );

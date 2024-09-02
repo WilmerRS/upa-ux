@@ -1,19 +1,27 @@
+interface DocumentFrame {
+  document: Document;
+  documentFrame: Document;
+  window: Window & typeof globalThis;
+}
+
 export default class UnipamplonaVortalLoadListener {
-  listen({ onLoad }: { onLoad: (documents: any) => void }) {
-    window.onload = () => {
-      this._onWindowLoad({ onLoad });
-    };
+  getWindowFrames(): Promise<DocumentFrame | null> {
+    return new Promise((resolve) => {
+      window.onload = () => {
+        resolve(this._onWindowLoad());
+      };
+    });
   }
 
-  _onWindowLoad({ onLoad }: { onLoad: (documents: any) => void }) {
+  _onWindowLoad(): DocumentFrame | null {
     const documentFrame = window.frames[1].document;
 
-    if (!documentFrame) return;
+    if (!documentFrame) return null;
 
     if (documentFrame.querySelector("body > table")) {
       const table: any = documentFrame.querySelector("body > table");
       if (!table?.style) {
-        return;
+        return null;
       }
       table.style.display = "none";
     }
@@ -26,10 +34,10 @@ export default class UnipamplonaVortalLoadListener {
 
     documentFrame.head.appendChild(cssNode);
 
-    onLoad({
+    return {
       document,
       documentFrame,
       window,
-    });
+    };
   }
 }
