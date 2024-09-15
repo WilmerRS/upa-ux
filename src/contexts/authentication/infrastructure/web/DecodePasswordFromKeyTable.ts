@@ -48,10 +48,10 @@ export default class DecodePasswordFromKeyTable {
     rawPassword: string;
     documentFrame: Document;
   }) {
-    var dict = this._search({ documentFrame });
-    var passwordSplit = rawPassword.split("");
-    var decodedPassword = [];
-    for (var i = 0; i < passwordSplit.length; i++) {
+    let dict = this._search({ documentFrame });
+    let passwordSplit = rawPassword.split("");
+    let decodedPassword = [];
+    for (let i = 0; i < passwordSplit.length; i++) {
       let key = passwordSplit[i].toUpperCase();
       decodedPassword[i] = dict[key];
     }
