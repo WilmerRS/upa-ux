@@ -1,29 +1,25 @@
 {
-  "name": "upa-ux",
+  "name": "upa-ux-monorepo",
   "private": true,
-  "version": "1.0.1",
+  "version": "2.0.0",
   "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "watch": "tsc && vite build --watch",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hook-form": "^7.53.0"
+    "we-dev": "npm run dev -w @upa-ux/web-extension",
+    "we-build": "npm run build -w @upa-ux/web-extension",
+    "we-watch": "npm run watch -w @upa-ux/web-extension",
+    "lint": "ts-standard",
+    "lint:fix": "ts-standard --fix"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.270",
-    "@types/node": "^22.5.2",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.43",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.2"
+    "ts-standard": "^12.0.2"
+  },
+  "standard": {
+    "ignore": [
+      "**/dist/**",
+      "**/node_modules/**"
+    ]
   }
 }
