@@ -10,6 +10,9 @@
     "we-dev": "npm run dev -w @upa-ux/web-extension",
     "we-build": "npm run build -w @upa-ux/web-extension",
     "we-watch": "npm run watch -w @upa-ux/web-extension",
+    "api-dev": "npm run dev -w @upa-ux/api",
+    "api-build": "npm run build -w @upa-ux/api",
+    "api-start": "npm run start -w @upa-ux/api",
     "lint": "ts-standard",
     "lint:fix": "ts-standard --fix"
   },
