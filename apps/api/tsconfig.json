@@ -17,6 +17,6 @@
     "paths": {
       "config/*": ["config/*"]
     },
-    "types": []
+    "types": ["node"]
   }
 }
