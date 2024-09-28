@@ -38,6 +38,18 @@ const startServer = async () => {
     }
   });
 
+  server.get("/api/health", async (_request, reply) => {
+    try {
+      reply.status(200).send({
+        message: "Ok",
+      });
+    } catch (e) {
+      reply.status(500).send({
+        message: "Failed",
+      });
+    }
+  });
+
   server.get("/", (request, reply) => {
     reply.status(200).send({ message: "Upa UX API" });
   });
