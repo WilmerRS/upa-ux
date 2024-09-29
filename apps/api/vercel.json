@@ -1,17 +1,9 @@
 {
-  "builds": [
-    {
-      "src": "/src/api/serverless.ts",
-      "use": "@vercel/node"
-    }
-  ],
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/src/api/serverless.ts"
     }
-  ],
-  "env": {
-    "SERVERLESS": "true"
-  }
+  ]
 }
