@@ -18,10 +18,12 @@
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
     "fastify": "^5.0.0",
+    "glob": "^11.0.0",
     "joi": "^17.13.3",
     "pino": "^9.4.0"
   },
   "devDependencies": {
+    "@types/glob": "^8.1.0",
     "@types/http-errors": "^2.0.4",
     "@types/node": "^22.7.4",
     "@types/pino": "^7.0.5",

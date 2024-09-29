@@ -3,32 +3,7 @@ import formbody from "@fastify/formbody";
 import helmet from "@fastify/helmet";
 import fastify from "fastify";
 import { getLogger } from "./config/logger";
-
-const html = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>UPA UX Api</title>
-    <meta
-      name="description"
-      content="UPA UX Api for Unipamplona content"
-    />
-  </head>
-  <body>
-    <h1>UPA UX Api</h1>
-    <hr />
-    <p>
-      Welcome to the UPA UX Api for Unipamplona content.
-    <p>
-  </body>
-</html>
-`;
+import { registerRoutes } from "./routes";
 
 export const initializeServer = () => {
   const logger = getLogger();
@@ -46,21 +21,7 @@ export const initializeServer = () => {
     reply.status(500).send({ error: "Something went wrong" });
   });
 
-  server.get("/health", async (_request, reply) => {
-    try {
-      reply.status(200).send({
-        message: "Ok",
-      });
-    } catch (e) {
-      reply.status(500).send({
-        message: "Failed",
-      });
-    }
-  });
-
-  server.get("/", (request, reply) => {
-    reply.status(200).type("text/html").send(html);
-  });
+  registerRoutes(server);
 
   // Graceful shutdown
   const signals: NodeJS.Signals[] = ["SIGINT", "SIGTERM"];
