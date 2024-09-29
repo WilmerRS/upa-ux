@@ -1,4 +1,4 @@
-import { initializeServer } from "src/initializeServer";
+import { initializeServer } from "../src/initializeServer";
 import initializeEnvConfig from "../src/config/env.config";
 
 initializeEnvConfig();
