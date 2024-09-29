@@ -8,6 +8,7 @@ export function registerRoutes(app: FastifyInstance) {
       const fileNameRegex = /[\/\\]([^\/\\]+)\.route(?=\.ts$)/;
       const fileName = routePath.match(fileNameRegex);
       if (!fileName) {
+        app.log.error(` - [ ] Skipping route: ${routePath}`);
         return null;
       }
 
