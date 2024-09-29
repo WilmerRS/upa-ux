@@ -2,25 +2,26 @@ import dotenv from "dotenv";
 import Joi from "joi";
 import path from "path";
 
-export default function initializeEnvConfig({
-  serverless,
-}: {
-  serverless: boolean;
-}): void {
-  if (!serverless) {
-    const envPath = path.join(__dirname, "..", "..", ".env");
+export function initializeEnvFileConfig(): void {
+  const envPath = path.join(__dirname, "..", "..", ".env");
 
-    const result = dotenv.config({ path: envPath });
+  const result = dotenv.config({ path: envPath });
 
-    if (result.error) {
-      throw new Error(
-        `[initializeEnvConfig] Failed to load .env file from path ${envPath}: ${result.error.message}`
-      );
-    }
-  } else {
-    dotenv.config();
+  if (result.error) {
+    throw new Error(
+      `[initializeEnvConfig] Failed to load .env file from path ${envPath}: ${result.error.message}`
+    );
   }
 
+  validateEnvironmentConfig();
+}
+
+export function initializeServerlessEnvConfig(): void {
+  dotenv.config();
+  validateEnvironmentConfig();
+}
+
+function validateEnvironmentConfig() {
   const schema = Joi.object({
     NODE_ENV: Joi.string()
       .valid("development", "testing", "production")

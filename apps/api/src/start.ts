@@ -1,9 +1,7 @@
-import initializeEnvConfig from "./config/env.config";
+import { initializeEnvFileConfig } from "./config/env.config";
 import { initializeServer } from "./initializeServer";
 
-initializeEnvConfig({
-  serverless: false,
-});
+initializeEnvFileConfig();
 
 const port = Number(process.env.API_PORT) || 5001;
 const host = String(process.env.API_HOST);
