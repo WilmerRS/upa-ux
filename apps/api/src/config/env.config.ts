@@ -2,15 +2,23 @@ import dotenv from "dotenv";
 import Joi from "joi";
 import path from "path";
 
-export default function initializeEnvConfig(): void {
-  const envPath = path.join(__dirname, "..", "..", ".env");
+export default function initializeEnvConfig({
+  serverless,
+}: {
+  serverless: boolean;
+}): void {
+  if (!serverless) {
+    const envPath = path.join(__dirname, "..", "..", ".env");
 
-  const result = dotenv.config({ path: envPath });
+    const result = dotenv.config({ path: envPath });
 
-  if (result.error) {
-    throw new Error(
-      `Failed to load .env file from path ${envPath}: ${result.error.message}`
-    );
+    if (result.error) {
+      throw new Error(
+        `[initializeEnvConfig] Failed to load .env file from path ${envPath}: ${result.error.message}`
+      );
+    }
+  } else {
+    dotenv.config();
   }
 
   const schema = Joi.object({
@@ -27,6 +35,8 @@ export default function initializeEnvConfig(): void {
   const { error } = schema.validate(process.env, { abortEarly: false });
 
   if (error) {
-    throw new Error(`Config validation error: ${error.message}`);
+    throw new Error(
+      `[initializeEnvConfig] Config validation error: ${error.message}`
+    );
   }
 }

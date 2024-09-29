@@ -1,7 +1,9 @@
-import { initializeServer } from "../src/initializeServer";
 import initializeEnvConfig from "../src/config/env.config";
+import { initializeServer } from "../src/initializeServer";
 
-initializeEnvConfig();
+initializeEnvConfig({
+  serverless: true,
+});
 
 const app = initializeServer();
 
