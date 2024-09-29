@@ -2,11 +2,11 @@
   "name": "@upa-ux/api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "start.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev ./src/index.ts"
+    "start": "node dist/start.js",
+    "dev": "ts-node-dev ./src/start.ts"
   },
   "keywords": [],
   "author": "",
