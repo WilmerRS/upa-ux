@@ -5,7 +5,7 @@
   "main": "start.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/start.js",
+    "start": "node dist/serverless.js",
     "dev": "ts-node-dev ./src/start.ts"
   },
   "keywords": [],

@@ -3,7 +3,7 @@ import { createServer } from "./createServer";
 
 initializeEnvConfig();
 
-export default async (req, res) => {
+export default async function handler(req: any, res: any) {
   const server = await createServer();
   try {
     await server.ready();
