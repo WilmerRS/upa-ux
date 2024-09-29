@@ -30,7 +30,7 @@ const html = `
 </html>
 `;
 
-export const createServer = () => {
+export const initializeServer = () => {
   const logger = getLogger();
   const server = fastify({
     logger,
@@ -47,18 +47,6 @@ export const createServer = () => {
   });
 
   server.get("/health", async (_request, reply) => {
-    try {
-      reply.status(200).send({
-        message: "Ok",
-      });
-    } catch (e) {
-      reply.status(500).send({
-        message: "Failed",
-      });
-    }
-  });
-
-  server.get("/api/health", async (_request, reply) => {
     try {
       reply.status(200).send({
         message: "Ok",

@@ -1,5 +1,5 @@
 import initializeEnvConfig from "./config/env.config";
-import { createServer } from "./createServer";
+import { initializeServer } from "./initializeServer";
 
 initializeEnvConfig();
 
@@ -7,7 +7,7 @@ const port = Number(process.env.API_PORT) || 5001;
 const host = String(process.env.API_HOST);
 
 const startServer = async () => {
-  const server = createServer();
+  const server = initializeServer();
   try {
     await server.listen({
       port,

@@ -1,9 +1,9 @@
-import { createServer } from "src/createServer";
+import { initializeServer } from "src/initializeServer";
 import initializeEnvConfig from "../config/env.config";
 
 initializeEnvConfig();
 
-const app = createServer();
+const app = initializeServer();
 
 export default async (req, res) => {
   await app.ready();
