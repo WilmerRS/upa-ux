@@ -12,5 +12,5 @@ const loggers = {
 };
 
 export const getLogger = () => {
-  return loggers[process.env.NODE_ENV || "development"];
+  return loggers[process.env.APP_ENV || "development"];
 };
