@@ -30,7 +30,7 @@ const html = `
 </html>
 `;
 
-export const createServer = async () => {
+export const createServer = () => {
   const logger = getLogger();
   const server = fastify({
     logger,

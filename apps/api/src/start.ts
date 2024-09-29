@@ -7,7 +7,7 @@ const port = Number(process.env.API_PORT) || 5001;
 const host = String(process.env.API_HOST);
 
 const startServer = async () => {
-  const server = await createServer();
+  const server = createServer();
   try {
     await server.listen({
       port,
