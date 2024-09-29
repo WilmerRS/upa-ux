@@ -13,6 +13,8 @@ const startServer = async () => {
       port,
       host,
     });
+    await server.ready()
+    await server.swagger();
   } catch (err) {
     server.log.error(err);
     process.exit(1);

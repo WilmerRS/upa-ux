@@ -1,10 +1,15 @@
+import path from "path";
+
 import autoload from "@fastify/autoload";
 import cors from "@fastify/cors";
 import formbody from "@fastify/formbody";
 import helmet from "@fastify/helmet";
+import swagger from "@fastify/swagger";
+import swaggerUI from "@fastify/swagger-ui";
 import fastify from "fastify";
-import path from "path";
+
 import { getLogger } from "./config/logger";
+import { swaggerConfig, swaggerUIConfig } from "./config/swagger";
 
 export const initializeServer = () => {
   const logger = getLogger();
@@ -15,6 +20,8 @@ export const initializeServer = () => {
   server.register(formbody);
   server.register(cors);
   server.register(helmet);
+  server.register(swagger, swaggerConfig);
+  server.register(swaggerUI, swaggerUIConfig);
 
   // Set error handler
   server.setErrorHandler((error, _request, reply) => {
