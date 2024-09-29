@@ -1,5 +1,5 @@
-import initializeEnvConfig from "./config/env.config";
-import { createServer } from "./createServer";
+import initializeEnvConfig from "../config/env.config";
+import { createServer } from "../createServer";
 
 initializeEnvConfig();
 
