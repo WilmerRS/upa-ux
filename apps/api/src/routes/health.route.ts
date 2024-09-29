@@ -1,6 +1,6 @@
 import { FastifyInstance } from "fastify";
 
-export const register = (app: FastifyInstance) => {
+export default (app: FastifyInstance, opts, done) => {
   app.get("/health", async (_request, reply) => {
     try {
       reply.status(200).send({
@@ -12,4 +12,6 @@ export const register = (app: FastifyInstance) => {
       });
     }
   });
+
+  done();
 };

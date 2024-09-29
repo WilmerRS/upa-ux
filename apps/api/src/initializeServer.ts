@@ -1,9 +1,10 @@
+import autoload from "@fastify/autoload";
 import cors from "@fastify/cors";
 import formbody from "@fastify/formbody";
 import helmet from "@fastify/helmet";
 import fastify from "fastify";
+import path from "path";
 import { getLogger } from "./config/logger";
-import { registerRoutes } from "./routes";
 
 export const initializeServer = () => {
   const logger = getLogger();
@@ -21,7 +22,10 @@ export const initializeServer = () => {
     reply.status(500).send({ error: "Something went wrong" });
   });
 
-  registerRoutes(server);
+  server.register(autoload, {
+    dir: path.join(__dirname, "routes"),
+    matchFilter: (filename) => filename.includes(".route"),
+  });
 
   // Graceful shutdown
   const signals: NodeJS.Signals[] = ["SIGINT", "SIGTERM"];

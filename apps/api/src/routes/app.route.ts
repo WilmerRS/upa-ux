@@ -26,8 +26,10 @@ const html = `
 </html>
 `;
 
-export const register = (app: FastifyInstance) => {
+export default (app: FastifyInstance, opts, done) => {
   app.get("/", (_request, reply) => {
     reply.status(200).type("text/html").send(html);
   });
+
+  done();
 };
