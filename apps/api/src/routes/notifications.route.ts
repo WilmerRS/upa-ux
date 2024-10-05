@@ -36,10 +36,17 @@ export default (app: FastifyInstance, opts, done) => {
       });
     });
 
-    reply.status(200).type("application/json").send({
-      data: notifications,
-      total: notifications.length,
-    });
+    reply
+      .status(200)
+      .headers({
+        "Cache-Control":
+          "public, s-maxage=900, max-age=900, stale-while-revalidate=900",
+      })
+      .type("application/json")
+      .send({
+        data: notifications,
+        total: notifications.length,
+      });
   });
 
   done();
