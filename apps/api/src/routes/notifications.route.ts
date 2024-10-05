@@ -40,7 +40,7 @@ export default (app: FastifyInstance, opts, done) => {
       .status(200)
       .headers({
         "Cache-Control":
-          "public, s-maxage=900, max-age=900, stale-while-revalidate=900",
+          "public, s-maxage=300, max-age=300, stale-while-revalidate=300",
       })
       .type("application/json")
       .send({
