@@ -1,13 +1,13 @@
-import { initializeServerlessEnvConfig } from "../src/config/env.config";
-import { initializeServer } from "../src/initializeServer";
+import { initializeServerlessEnvConfig } from '../src/config/env.config'
+import { initializeServer } from '../src/initializeServer'
 
-initializeServerlessEnvConfig();
+initializeServerlessEnvConfig()
 
-const app = initializeServer();
+const app = initializeServer()
 
 export default async (req, res) => {
-  await app.ready();
-  await app.swagger();
+  await app.ready()
+  await app.swagger()
 
-  app.server.emit("request", req, res);
-};
+  app.server.emit('request', req, res)
+}

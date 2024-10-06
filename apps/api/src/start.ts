@@ -1,30 +1,30 @@
-import { initializeEnvFileConfig } from "./config/env.config";
-import { initializeServer } from "./initializeServer";
+import { initializeEnvFileConfig } from './config/env.config'
+import { initializeServer } from './initializeServer'
 
-initializeEnvFileConfig();
+initializeEnvFileConfig()
 
-const port = Number(process.env.API_PORT) || 5001;
-const host = String(process.env.API_HOST);
+const port = Number(process.env.API_PORT) || 5001
+const host = String(process.env.API_HOST)
 
 const startServer = async () => {
-  const server = initializeServer();
+  const server = initializeServer()
   try {
     await server.listen({
       port,
-      host,
-    });
-    await server.ready();
-    await server.swagger();
+      host
+    })
+    await server.ready()
+    await server.swagger()
   } catch (err) {
-    server.log.error(err);
-    process.exit(1);
+    server.log.error(err)
+    process.exit(1)
   }
-};
+}
 
 // Handle unhandled rejections
-process.on("unhandledRejection", (err) => {
-  console.error("Unhandled Rejection:", err);
-  process.exit(1);
-});
+process.on('unhandledRejection', (err) => {
+  console.error('Unhandled Rejection:', err)
+  process.exit(1)
+})
 
-startServer();
+startServer()

@@ -18,7 +18,7 @@ export default class UnipamplonaVortalLoadListener {
 
     if (!documentFrame) return null
 
-    if (documentFrame.querySelector('body > table')) {
+    if (documentFrame.querySelector('body > table') != null) {
       const table: any = documentFrame.querySelector('body > table')
       if (!table?.style) {
         return null

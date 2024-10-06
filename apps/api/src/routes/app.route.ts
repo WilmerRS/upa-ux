@@ -1,4 +1,4 @@
-import { FastifyInstance } from "fastify";
+import { FastifyInstance } from 'fastify'
 
 const html = `
 <!DOCTYPE html>
@@ -24,12 +24,12 @@ const html = `
     <p>
   </body>
 </html>
-`;
+`
 
 export default (app: FastifyInstance, opts, done) => {
-  app.get("/", (_request, reply) => {
-    reply.status(200).type("text/html").send(html);
-  });
+  app.get('/', (_request, reply) => {
+    reply.status(200).type('text/html').send(html)
+  })
 
-  done();
-};
+  done()
+}

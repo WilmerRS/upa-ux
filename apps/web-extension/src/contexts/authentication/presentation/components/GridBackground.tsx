@@ -1,9 +1,9 @@
 const GridBackground = ({
   children,
-  className='',
+  className = ''
 }: {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }) => {
   return (
     <div
@@ -13,7 +13,7 @@ const GridBackground = ({
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default GridBackground;
+export default GridBackground

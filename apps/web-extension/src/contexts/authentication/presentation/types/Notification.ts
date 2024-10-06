@@ -1,8 +1,8 @@
 interface Notification {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
+  title: string
+  description: string
+  image: string
+  link: string
 }
 
-export default Notification;
+export default Notification

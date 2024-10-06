@@ -1,16 +1,16 @@
 const loggers = {
   development: {
     transport: {
-      target: "pino-pretty",
+      target: 'pino-pretty',
       options: {
-        translateTime: "HH:MM:ss Z",
-        ignore: "pid,hostname",
-      },
-    },
+        translateTime: 'HH:MM:ss Z',
+        ignore: 'pid,hostname'
+      }
+    }
   },
-  production: true,
-};
+  production: true
+}
 
 export const getLogger = () => {
-  return loggers[process.env.APP_ENV || "development"];
-};
+  return loggers[process.env.APP_ENV || 'development']
+}
