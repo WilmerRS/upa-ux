@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::selection {
+  background: #474747;
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #474747;
+  color: white;
+  text-shadow: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ececec;
+  border-radius: 3px;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c4c4c;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #111827;
+}
