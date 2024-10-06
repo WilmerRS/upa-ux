@@ -12,7 +12,7 @@ Home page wrapper of the University of Pamplona in order to improve the user exp
 1. ⭐️ Install Node >= 20.
 2. 🌀 Clone this repository: `git clone git@github.com:WilmerRS/upa-ux.git`.
 3. ⚒️ Install dependencies: `npm i`.
-4. ✅ Build: `npm run ws-build`.
+4. ✅ Build: `npm run we-build`.
 5. 😄 Import `apps/web-extension/dist` folder from Chrome extension and enjoy.
 
 ## 📷 Screenshots
