@@ -3,11 +3,13 @@ import Notification from '../types/Notification'
 import GridBackground from './GridBackground'
 import NotificationCard from './NotificationCard'
 
+const API_URL = 'https://api.upaux.wrsbyte.com'
+
 const Notifications = () => {
   const [notifications, setNotifications] = useState<Notification[]>([])
 
   useEffect(() => {
-    fetch('https://upa-ux-api.vercel.app/api/unipamplona/notifications')
+    fetch(`${API_URL}/api/unipamplona/notifications`)
       .then(async (response) => await response.json())
       .then((data) => setNotifications(data.data))
   }, [])
