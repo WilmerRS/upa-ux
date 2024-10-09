@@ -10,7 +10,7 @@ interface Notification {
 
 const pageUrl = 'https://www.unipamplona.edu.co'
 
-export default (app: FastifyInstance, opts, done) => {
+export default (app: FastifyInstance, _opts, done) => {
   app.get('/api/unipamplona/notifications', async (_request, reply) => {
     const response = await fetch(pageUrl)
     const html = await response.text()
@@ -40,7 +40,7 @@ export default (app: FastifyInstance, opts, done) => {
       .status(200)
       .headers({
         'Cache-Control':
-          'public, s-maxage=300, max-age=300, stale-while-revalidate=300'
+          'public, s-maxage=3600, max-age=3600, stale-while-revalidate=3600'
       })
       .type('application/json')
       .send({
