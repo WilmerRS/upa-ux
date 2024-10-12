@@ -3,6 +3,7 @@
         "Autoload",
         "fastify",
         "formbody",
+        "labelledby",
         "pino",
         "unipamplona",
         "Vortal"
