@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "short_name": "UPA-UX",
   "name": "UPA UX",
   "description": "Mejora la experiencia del inicio de sesión en el Vortal de la Universidad de Pamplona. Confiable y de código abierto.",
