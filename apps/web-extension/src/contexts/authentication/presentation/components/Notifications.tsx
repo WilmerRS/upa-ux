@@ -3,7 +3,7 @@ import Notification from '../types/Notification'
 import GridBackground from './GridBackground'
 import NotificationCard from './NotificationCard'
 
-const API_URL = 'https://api.upaux.wrsbyte.com'
+const API_URL = 'https://upaux.wrsbyte.com'
 
 const Notifications = () => {
   const [notifications, setNotifications] = useState<Notification[]>([])
