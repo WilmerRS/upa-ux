@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "short_name": "UPA-UX",
   "name": "UPA UX",
-  "description": "UPA UX mejora la experiencia de usuario del inicio de sesión en el Vortal de la Universidad de Pamplona. Usa tu gestor de contraseñas favorito para recordar tus credenciales.",
+  "description": "Mejora la experiencia del inicio de sesión en el Vortal de la Universidad de Pamplona. Confiable y de código abierto.",
   "author": {
     "email": "me@wrsbyte.com"
   },
@@ -51,7 +51,5 @@
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
-  "permissions": [
-    "tabs"
-  ]
+  "permissions": []
 }
