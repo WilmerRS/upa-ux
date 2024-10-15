@@ -7,7 +7,11 @@
 
 Home page wrapper of the University of Pamplona in order to improve the user experience. 🌟
 
-## Getting Started
+## ✅ Install and Use
+
+Visit the web site of [Chrome Web Store](https://chromewebstore.google.com/detail/upa-ux/cbkhjckelimkbkmofdjjoekoimhgkkne?hl=es) and install the extension.  🚀
+
+## 📦 Getting Started
 
 1. ⭐️ Install Node >= 20.
 2. 🌀 Clone this repository: `git clone git@github.com:WilmerRS/upa-ux.git`.
